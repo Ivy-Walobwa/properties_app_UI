@@ -28,7 +28,7 @@ class CompanyReviewWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Ives Walobwa',
+                    'Fabiola Ives ',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
