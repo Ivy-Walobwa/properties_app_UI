@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:properties_app/constants.dart';
 
 import '../widgets/widgets.dart';
 
@@ -50,16 +49,14 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             height: 30,
           ),
-          Flexible(
-            child: ListView.builder(
-              physics: NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              itemBuilder: (ctx, idx) => Padding(
-                padding: const EdgeInsets.fromLTRB(24, 0, 24, 0),
-                child: SinglePropertyWidget(),
-              ),
-              itemCount: 5,
+          ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemBuilder: (ctx, idx) => Padding(
+              padding: const EdgeInsets.fromLTRB(24, 0, 24, 0),
+              child: SinglePropertyWidget(),
             ),
+            itemCount: 5,
           )
         ],
       ),
