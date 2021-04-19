@@ -18,7 +18,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     _tabController = TabController(length: 5, vsync: this);
   }
 
-
   @override
   void dispose() {
     super.dispose();
@@ -28,7 +27,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF8F8F8),
+      backgroundColor: kWhiteColor,
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.all(Radius.circular(30)),
         child: Container(
@@ -51,6 +50,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       ),
       body: SafeArea(
         child: TabBarView(
+          physics: NeverScrollableScrollPhysics(),
           controller: _tabController,
           children: [
            HomeScreen(),
