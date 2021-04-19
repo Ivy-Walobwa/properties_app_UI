@@ -29,7 +29,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     return Scaffold(
       backgroundColor: kWhiteColor,
       bottomNavigationBar: ClipRRect(
-        borderRadius: BorderRadius.all(Radius.circular(30)),
+        borderRadius: BorderRadius.only(topLeft:Radius.circular(30),topRight:Radius.circular(30)),
         child: Container(
           color: Colors.white,
           child: TabBar(
